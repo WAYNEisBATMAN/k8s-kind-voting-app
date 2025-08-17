@@ -4,13 +4,13 @@ metadata:
   name: result-ingress
   namespace: voting-app
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /   
+    nginx.ingress.kubernetes.io/rewrite-target: /$2   
 spec:
   ingressClassName: nginx
   rules:
   - http:
       paths:
-      - path: /result(/|$)
+      - path: /result(/|$)(.*) 
         pathType: ImplementationSpecific    
         backend:
           service:
