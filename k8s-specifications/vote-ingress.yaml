@@ -10,8 +10,8 @@ spec:
   rules:
   - http:
       paths:
-      - path: /vote(/|$)    
-        pathType: Prefix  
+      - path: /vote(/|$) 
+        pathType: ImplementationSpecific   
         backend:
           service:
             name: vote
