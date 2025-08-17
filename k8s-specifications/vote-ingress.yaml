@@ -10,7 +10,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /vote    
+      - path: /vote(/|$)    
         pathType: Prefix  
         backend:
           service:

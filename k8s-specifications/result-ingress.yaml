@@ -10,7 +10,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /result    
+      - path: /result(/|$)    
         pathType: Prefix  
         backend:
           service:
